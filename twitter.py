@@ -13,9 +13,9 @@ ACCESS_SECRET = ''
 
 host="" # irc host addr
 port=6667  # Port
-nick="Tweetn" #Nick
-ident="twitter" #ident
-realname="tweeter" #realname
+nick="" #Nick
+ident="" #ident
+realname="" #realname
 channel="" #channel
 
 s=socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP) 
