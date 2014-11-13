@@ -25,9 +25,6 @@ def campareLines():
           else:
             return False
 
-    #fold.close
-    #fnew.close
-
 def campareTweets(t): 
   fold = open('old.txt', 'ra+')
   fnew, arry = open('new.txt', 'w+'), []
