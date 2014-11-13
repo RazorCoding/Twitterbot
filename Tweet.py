@@ -7,10 +7,10 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)
 SAFE_USER = 'Bursihido' #only safe user can command the bot
 BUFSIZ = 4096
 NUM_TWEETS = 10
-CONSUMER_KEY = 'EWFlKMv8ZJYk1z2FUAeBYTuj3'
-CONSUMER_SECRET = '9yp0FfSwkCV7MYHshInnIPXPNRUo3nfBhSVRjdwJHDYhGTHiDi'
-ACCESS_KEY = '47053982-7fwSNtzL0WM3nSOJ5DlhWIAeMOlZ2jHGX9oV2jv8w'
-ACCESS_SECRET = '6mV1Jhg3J2eno73fgG9qE7454HwnfO03kSQAurM40r0FB'
+CONSUMER_KEY = ''
+CONSUMER_SECRET = ''
+ACCESS_KEY = ''
+ACCESS_SECRET = ''
 
 def remove_non_ascii(s):
   return ''.join(i for i in s if ord(i)<128)
@@ -50,7 +50,7 @@ def campareTweets(t):
   fnew.close()
 
   Flag = campareLines()
-  print Flag
+  
   if Flag == False:
     for fnew in arry:
       fold.write(fnew)
@@ -61,12 +61,12 @@ def campareTweets(t):
 
   return arry
 
-host='irc.evilzone.org' # irc host addr
+host='' # irc host addr
 port=6667  # Port
 nick='Tweetn' #Nick
 ident='twitter' #ident
 realname='tweeter' #realname
-channel='#test' #channel
+channel='' #channel
  
 s.connect((host,port)) ## connecting server
 s.sendall("NICK %s\r\n" % nick) #sending nick
