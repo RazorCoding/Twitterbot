@@ -91,13 +91,4 @@ while True:
       s.sendall("PONG {0}\r\n".format(msg))
       campareTweets(t)
     elif 'PRIVMSG' in line: # PRIVMSG lines only below
-      if ':!quit' in line: #if a user PRIVMSG's '!quit' quit
-        s.sendall("PONG {0}\r\n".format(msg))
-        user = line[line.find(':!quit'):].rstrip()
-        if user in SAFE_USER:
-          s.sendall("QUIT :Quit: Leaving...\r\n")
-          exit(0)
-      else:
-        next
-    else:
-      next
+       next
