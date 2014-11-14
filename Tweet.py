@@ -89,6 +89,7 @@ while True:
     if 'PING' in line: #if the server pings , ping back (keep connection)
       msg = line.split(':')[1].lstrip().rstrip()
       s.sendall("PONG {0}\r\n".format(msg))
+      campareTweets(t)
     elif 'PRIVMSG' in line: # PRIVMSG lines only below
       if ':!quit' in line: #if a user PRIVMSG's '!quit' quit
         s.sendall("PONG {0}\r\n".format(msg))
@@ -96,8 +97,6 @@ while True:
         if user in SAFE_USER:
           s.sendall("QUIT :Quit: Leaving...\r\n")
           exit(0)
-      elif ':!update' in line:
-        campareTweets(t)
       else:
         next
     else:
