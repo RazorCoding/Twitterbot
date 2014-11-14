@@ -6,6 +6,7 @@ import socket, re, string, time
 SAFE_USER = 'Bursihido' #only safe user can command the bot
 BUFSIZ = 4096
 NUM_TWEETS = 10
+
 CONSUMER_KEY = ''
 CONSUMER_SECRET = ''
 ACCESS_KEY = ''
