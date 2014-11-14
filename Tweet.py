@@ -3,7 +3,6 @@
 from twitter import *
 import socket, re, string, time
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)
 SAFE_USER = 'Bursihido' #only safe user can command the bot
 BUFSIZ = 4096
 NUM_TWEETS = 10
@@ -64,7 +63,7 @@ nick='Tweetn' #Nick
 ident='twitter' #ident
 realname='tweeter' #realname
 channel='' #channel
- 
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP) 
 s.connect((host,port)) ## connecting server
 s.sendall("NICK %s\r\n" % nick) #sending nick
 s.sendall("USER %s %s bla :%s\r\n" % (ident, host, realname)) # sending ident host realname
