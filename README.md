@@ -1,6 +1,6 @@
 twitterbot
 ==========
 Requirements:
-            twitter-python https://pypi.python.org/pypi/twitter
+            https://pypi.python.org/pypi/twitter // twitter module
         
             
